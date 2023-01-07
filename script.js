@@ -45,3 +45,14 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 }
+
+function game(rounds = 1) {
+  for (let i = 0; i < rounds; i++) {
+    const playerChoice = getPlayerChoice();
+    const computerChoice = getComputerChoice();
+
+    const result = playRound(playerChoice, computerChoice);
+
+    console.log(result);
+  }
+}
