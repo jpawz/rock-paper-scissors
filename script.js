@@ -16,7 +16,11 @@ function getPlayerChoice() {
     answer.toLowerCase() != "scissors"
   );
 
-  return answer[0].toUpperCase() + answer.substring(1).toLowerCase();
+  return capitalize(answer);
+}
+
+function capitalize(string) {
+    string[0].toUpperCase() + string.substring(1).toLowerCase();
 }
 
 function playRound(playerSelection, computerSelection) {
