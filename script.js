@@ -70,21 +70,33 @@ const result = document.getElementById("result");
 const playerScoreElement = document.getElementById("playerScore");
 const computerScoreElement = document.getElementById("computerScore");
 
+function setScores() {
+  playerScoreElement.innerText = playerScore;
+  computerScoreElement.innerText = computerScore;
+  if(playerScore === 5) {
+    result.innerText = "You Win the Game!";
+    playerScore = 0;
+    computerScore = 0;
+  }
+  if(computerScore === 5) {
+    result.innerText = "Computer Win the Game!";
+    playerScore = 0;
+    computerScore = 0;
+  }
+}
+
 const rockButton = document.getElementById("rock");
 rockButton.addEventListener("click", function () {
   result.innerText = playRound("Rock", getComputerChoice());
-  playerScoreElement.innerText = playerScore;
-  computerScoreElement.innerText = computerScore;
+  setScores();
 });
 const paperButton = document.getElementById("paper");
 paperButton.addEventListener("click", function () {
   result.innerText = playRound("Paper", getComputerChoice());
-  playerScoreElement.innerText = playerScore;
-  computerScoreElement.innerText = computerScore;
+  setScores();
 });
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.addEventListener("click", function () {
   result.innerText = playRound("Scissors", getComputerChoice());
-  playerScoreElement.innerText = playerScore;
-  computerScoreElement.innerText = computerScore;
+  setScores();
 });
