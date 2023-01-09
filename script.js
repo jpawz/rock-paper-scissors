@@ -56,3 +56,16 @@ function game(rounds = 1) {
     console.log(result);
   }
 }
+
+const rockButton = document.getElementById("rock");
+rockButton.addEventListener("click", function () {
+  console.log(playRound("Rock", getComputerChoice()));
+});
+const paperButton = document.getElementById("paper");
+paperButton.addEventListener("click", function () {
+  console.log(playRound("Paper", getComputerChoice()));
+});
+const scissorsButton = document.getElementById("scissors");
+scissorsButton.addEventListener("click", function () {
+  console.log(playRound("Scissors", getComputerChoice()));
+});
