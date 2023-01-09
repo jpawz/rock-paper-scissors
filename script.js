@@ -57,15 +57,17 @@ function game(rounds = 1) {
   }
 }
 
+const result = document.getElementById("result");
+
 const rockButton = document.getElementById("rock");
 rockButton.addEventListener("click", function () {
-  console.log(playRound("Rock", getComputerChoice()));
+  result.innerText = playRound("Rock", getComputerChoice());
 });
 const paperButton = document.getElementById("paper");
 paperButton.addEventListener("click", function () {
-  console.log(playRound("Paper", getComputerChoice()));
+  result.innerText = playRound("Paper", getComputerChoice());
 });
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.addEventListener("click", function () {
-  console.log(playRound("Scissors", getComputerChoice()));
+  result.innerText = playRound("Scissors", getComputerChoice());
 });
