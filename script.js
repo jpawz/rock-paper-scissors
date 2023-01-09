@@ -6,19 +6,6 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
-function getPlayerChoice() {
-  let answer;
-  do {
-    answer = prompt("Type Rock, Paper or Scissors");
-  } while (choices.lastIndexOf(capitalize(answer)) === -1);
-
-  return capitalize(answer);
-}
-
-function capitalize(string) {
-  return string[0].toUpperCase() + string.substring(1).toLowerCase();
-}
-
 let playerScore = 0;
 let computerScore = 0;
 
@@ -52,17 +39,6 @@ function playRound(playerSelection, computerSelection) {
       computerScore++;
       return "You Lose! Rock beats Scissors";
     }
-  }
-}
-
-function game(rounds = 1) {
-  for (let i = 0; i < rounds; i++) {
-    const playerChoice = getPlayerChoice();
-    const computerChoice = getComputerChoice();
-
-    const result = playRound(playerChoice, computerChoice);
-
-    console.log(result);
   }
 }
 
